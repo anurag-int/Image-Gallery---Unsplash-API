@@ -1,0 +1,91 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+
+
+.wrapper{
+    
+    background-image: linear-gradient(to bottom, rgb(62, 143, 77), rgb(56, 142, 158));
+    min-height: 100vh;
+    /* width: 100vw; */
+    overflow-x: hidden;
+    overflow-y: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.div1{
+    margin: 10px;
+    background-color: aliceblue;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+
+h3{
+    /* for light the text */
+    font-weight: 400;
+    margin: 10px;
+    margin-bottom: 20px;
+}
+
+input{
+    font-size: 14px;
+    text-align: center;
+    width: 100px;
+    padding: 10px ;
+    border-radius: 3px;
+    background-color: #fff;
+    border: 1px solid black;
+}
+
+.button{
+    background-color: rgb(4, 8, 10);
+    color: white;
+    width: 100px;
+    margin-bottom: 10px;
+    text-align: center;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    width: 200px;
+    height: 40px;
+    font-size: 20px;
+}
+.button:hover{
+    background-color: green;
+}
+
+.errorMessage{
+    color: red;
+    font-weight: 600;
+    margin: 10px;
+
+    /* to hide the data we use dispay: none */
+    display: none;
+}
+
+.gallery img{
+    width: 400px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+.gallery{
+    display: none;
+}

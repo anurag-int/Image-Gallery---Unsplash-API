@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <link rel="stylesheet" href="./styles.css">
+
+</head>
+<body>
+
+
+    <div class="wrapper">
+        <div class="div1">
+            <h1>Photo Gallery</h1>
+            <h3>Enter the number of photos</h3>
+            <input type="number" name="input" id="input" value="2" min="1" max="100">
+            <small class="errorMessage" id="errorMessage">Error Message</small>
+            <br>
+            <button id="button" class="button" >Get Photos </button>
+            <div class="gallery" id="gallery">
+                <img src="./Images/img1.jpg" alt="img1">
+                <img src="./Images/img2.jpg" alt="img2">
+                <img src="https://images.unsplash.com/photo-1678985690749-f3847eb01d2b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=1000&q=60">
+
+            </div>
+            
+        </div>
+    </div>
+    <script src="./app.js"></script>
+</body>
+</html>
