@@ -5,10 +5,10 @@ const galleryEl = document.getElementById("gallery");
 async function fetchImage() {
   const inputValue = document.getElementById("input").value;
 
-  if (inputValue > 10 || inputValue < 1) {
-    errorMessageEl.style.display = "block";
-    errorMessageEl.innerText = "Number should be between 0 and 11";
-    return;
+  if (inputValue <1 || inputValue > 100) {
+      errorMessageEl.style.display = "block";
+      errorMessageEl.innerText = "Number should be between 1 and 100";
+      return;
   }
 
   imgs = "";
