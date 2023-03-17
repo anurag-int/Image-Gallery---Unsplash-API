@@ -23,9 +23,10 @@
     margin: 10px;
     background-color: aliceblue;
     padding: 20px;
-    border-radius: 5px;
+    border-radius: 7px;
     box-shadow: 0 10px 20px rgba(0,0,0,0.3);
     width: 90%;
+    height: 60vh;
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -87,5 +88,5 @@ input{
 }
 
 .gallery{
-    display: none;
+    display: block;
 }
