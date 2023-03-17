@@ -79,13 +79,20 @@ input{
 }
 
 .gallery img{
-    width: 400px;
-    height: 250px;
+    width: 350px;
+    height: 400px;
     object-fit: cover;
-    border-radius: 5px;
+    border-radius: 30px;
     margin: 5px;
 }
 
 .gallery{
     display: block;
+}
+
+
+img:hover{
+    transform: scale(1.03);
+    box-shadow: 0 0 20px black;
+    transition: 0.2s;
 }
