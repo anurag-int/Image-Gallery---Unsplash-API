@@ -14,27 +14,101 @@ async function fetchImage() {
   imgs = "";
 
   try {
-    
-    await fetch(
-      `https://api.unsplash.com/photos?per_page=${inputValue}&page=${Math.round(
-        Math.random() * 1000
-      )}&client_id=KThOQpZswvKhcZAoKpZL1PG44y1whvHJrMzxeff8-9s`
-    ).then((res) =>
-      res.json().then((data) => {
-        if (data) {
-          data.forEach((pic) => {
-            imgs += `
-            <img src=${pic.urls.small} alt="image"/>
-            `;
-            galleryEl.style.display = "block";
-            galleryEl.innerHTML = imgs;
-            btnEl.style.display = "block";
-            errorMessageEl.style.display = "none";
-          });
+        var temp_value = inputValue;
+        
+          await fetch(
+          `https://api.unsplash.com/photos?per_page=${temp_value}&page=${Math.round(
+            Math.random() * 1000
+          )}&client_id=KThOQpZswvKhcZAoKpZL1PG44y1whvHJrMzxeff8-9s`
+        ).then((res) =>
+          res.json().then((data) => {
+            if (data) {
+              data.forEach((pic) => {
+                imgs += `
+                <img src=${pic.urls.small} alt="image"/>
+                `;
+                galleryEl.style.display = "block";
+                galleryEl.innerHTML = imgs;
+                btnEl.style.display = "block";
+                errorMessageEl.style.display = "none";
+              });
+            }
+          })
+        );
+
+        temp_value = temp_value - 30;
+        if(temp_value > 0)
+        {
+          await fetch(
+            `https://api.unsplash.com/photos?per_page=${temp_value}&page=${Math.round(
+              Math.random() * 1000
+            )}&client_id=KThOQpZswvKhcZAoKpZL1PG44y1whvHJrMzxeff8-9s`
+          ).then((res) =>
+            res.json().then((data) => {
+              if (data) {
+                data.forEach((pic) => {
+                  imgs += `
+                  <img src=${pic.urls.small} alt="image"/>
+                  `;
+                  galleryEl.style.display = "block";
+                  galleryEl.innerHTML = imgs;
+                  btnEl.style.display = "block";
+                  errorMessageEl.style.display = "none";
+                });
+              }
+            })
+          );
         }
-      })
-    );
-  } catch (error) {
+        temp_value = temp_value - 30;
+        if(temp_value > 0)
+        {
+          await fetch(
+            `https://api.unsplash.com/photos?per_page=${temp_value}&page=${Math.round(
+              Math.random() * 1000
+            )}&client_id=KThOQpZswvKhcZAoKpZL1PG44y1whvHJrMzxeff8-9s`
+          ).then((res) =>
+            res.json().then((data) => {
+              if (data) {
+                data.forEach((pic) => {
+                  imgs += `
+                  <img src=${pic.urls.small} alt="image"/>
+                  `;
+                  galleryEl.style.display = "block";
+                  galleryEl.innerHTML = imgs;
+                  btnEl.style.display = "block";
+                  errorMessageEl.style.display = "none";
+                });
+              }
+            })
+          );
+        }
+
+        temp_value = temp_value - 30;
+        if(temp_value > 0)
+        {
+          await fetch(
+            `https://api.unsplash.com/photos?per_page=${temp_value}&page=${Math.round(
+              Math.random() * 1000
+            )}&client_id=KThOQpZswvKhcZAoKpZL1PG44y1whvHJrMzxeff8-9s`
+          ).then((res) =>
+            res.json().then((data) => {
+              if (data) {
+                data.forEach((pic) => {
+                  imgs += `
+                  <img src=${pic.urls.small} alt="image"/>
+                  `;
+                  galleryEl.style.display = "block";
+                  galleryEl.innerHTML = imgs;
+                  btnEl.style.display = "block";
+                  errorMessageEl.style.display = "none";
+                });
+              }
+            })
+          );
+        }
+
+  } 
+  catch (error) {
     console.log(error);
     errorMessageEl.style.display = "block";
     errorMessageEl.innerHTML = "An error happened, try again later";
