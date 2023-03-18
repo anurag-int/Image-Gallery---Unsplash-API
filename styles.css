@@ -9,7 +9,7 @@
 
 .wrapper{
     
-    background-image: linear-gradient(to bottom, rgb(62, 143, 77), rgb(56, 142, 158));
+    background-image: linear-gradient(to bottom,rgb(56, 142, 158), rgb(62, 143, 77));
     min-height: 100vh;
     /* width: 100vw; */
     overflow-x: hidden;
